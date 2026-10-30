@@ -1,0 +1,16 @@
+{
+  "name": "auto-cylone-lic",
+  "terminals": [
+    {
+      "name": "license-file-server",
+      "command": "python3 -m http.server 8000 --bind 0.0.0.0",
+      "description": "Static HTTP server rooted at the repository. Serves the cyclone license/config files under /autovolam/... exactly as they are consumed in production from raw.githubusercontent.com (see autovolam/license_host.txt). Example: curl http://localhost:8000/autovolam/version.txt"
+    }
+  ],
+  "ports": [
+    {
+      "name": "license-file-server",
+      "port": 8000
+    }
+  ]
+}
